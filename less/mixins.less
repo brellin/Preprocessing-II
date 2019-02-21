@@ -1,6 +1,6 @@
 // Mixins in here
 // color, background, then padding
-.button(@1, @2, @3){
+.button(@1, @2, @3) {
     text-align: center;
     color: @1;
     background: @2;
@@ -8,9 +8,19 @@
     border-radius: 15px;
     font-size: 2rem;
     width: 80%;
-    &:hover{
+    &:hover {
         color: @2;
         background: @1;
         cursor: pointer;
+        .anim();
     }
+}
+
+.anim(@1: 1s, @2: 0s, @3: alternate) {
+    @keyframes anim {
+        to {
+            transform: rotate(180deg);
+        }
+    }
+    animation: anim @1 linear @2 infinite @3;
 }

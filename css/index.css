@@ -343,4 +343,10 @@ header h1 {
   color: #17A2B8;
   background: whitesmoke;
   cursor: pointer;
+  animation: anim 1s linear 0s infinite alternate;
+}
+@keyframes anim {
+  to {
+    transform: rotate(180deg);
+  }
 }
