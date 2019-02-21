@@ -249,3 +249,17 @@ header h1 {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  text-align: center;
+  color: whitesmoke;
+  background: #17A2B8;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-size: 2rem;
+  width: 80%;
+}
+.home .content-pick .destination .btn:hover {
+  color: #17A2B8;
+  background: whitesmoke;
+  cursor: pointer;
+}
