@@ -175,7 +175,6 @@ img {
 }
 nav {
   min-height: 75px;
-  max-width: 800px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -190,12 +189,27 @@ nav {
     justify-content: center;
   }
 }
+nav .wrap {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
 @media (max-width: 500px) {
-  nav h1 {
+  nav .wrap {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  nav .wrap h1 {
     margin: 15px auto;
   }
 }
-nav div a {
+nav .wrap div a {
   font-size: 1.5rem;
   color: black;
   padding: 0px 0 0 25px;
@@ -203,12 +217,12 @@ nav div a {
   font-weight: bold;
 }
 @media (max-width: 500px) {
-  nav div a {
+  nav .wrap div a {
     padding: 0px;
   }
 }
 @media (max-width: 500px) {
-  nav div {
+  nav .wrap div {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -363,6 +377,7 @@ header h1 {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 1.5rem;
 }
 .home .choose h1 {
   display: block;
@@ -379,4 +394,5 @@ header h1 {
 .home .choose form input,
 .home .choose form select {
   margin-bottom: 10px;
+  border-radius: 15px;
 }

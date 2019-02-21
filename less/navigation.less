@@ -1,7 +1,6 @@
 // Navigation Styles here
 nav{
     min-height: 75px;
-    max-width: 800px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -13,26 +12,39 @@ nav{
         flex-direction: column;
         justify-content: center;
     }
-    h1{
+    .wrap{
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
         @media @mobile{
-            margin: 15px auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
         }
-    }
-    div{
-        a{
-            font-size: 1.5rem;
-            color: black;
-            padding: 0px 0 0 25px;
-            text-decoration: none;
-            font-weight: bold;
+        h1{
             @media @mobile{
-                padding: 0px;
+                margin: 15px auto;
             }
         }
-        @media @mobile{
-            display: flex;
-            justify-content: space-evenly;
-            width: 100%;
+        div{
+            a{
+                font-size: 1.5rem;
+                color: black;
+                padding: 0px 0 0 25px;
+                text-decoration: none;
+                font-weight: bold;
+                @media @mobile{
+                    padding: 0px;
+                }
+            }
+            @media @mobile{
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+            }
         }
     }
 }
