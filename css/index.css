@@ -168,6 +168,11 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
 nav {
   min-height: 75px;
   max-width: 800px;
@@ -176,6 +181,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  border-bottom: 2px dashed #C0C0C0;
 }
 @media (max-width: 500px) {
   nav {
@@ -220,7 +226,6 @@ nav div a {
   padding: 20px;
 }
 header {
-  border-top: 2px dashed #C0C0C0;
   border-bottom: 2px dashed #C0C0C0;
   padding-bottom: 25px;
 }
