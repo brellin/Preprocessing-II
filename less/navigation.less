@@ -1,49 +1,46 @@
 // Navigation Styles here
+
 nav{
-    min-height: 75px;
+    position: sticky;
+    top: 0;
+    background: @white;
+    border-bottom: 2px dashed @silver;
     width: 100%;
+    height: max-content;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    border-bottom: 2px dashed @navigation-border;
+    
     @media @mobile{
-        flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
     }
-    .wrap{
-        max-width: 800px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
+
+    h1{
         @media @mobile{
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: center;
+            margin-bottom: 15px;
         }
-        h1{
-            @media @mobile{
-                margin: 15px auto;
-            }
+    }
+
+    div{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        @media @mobile{
+            width: 100%;
         }
-        div{
-            a{
-                font-size: 1.5rem;
-                color: black;
-                padding: 0px 0 0 25px;
-                text-decoration: none;
-                font-weight: bold;
-                @media @mobile{
-                    padding: 0px;
-                }
-            }
-            @media @mobile{
-                display: flex;
-                justify-content: space-evenly;
-                width: 100%;
+
+        a{
+            color: black;
+            text-decoration: none;
+            font-size: 1.5rem;
+            .trans();
+
+            &:hover{
+                text-decoration: underline;
+                color: blue;
             }
         }
     }

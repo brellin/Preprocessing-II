@@ -1,48 +1,59 @@
-header{
-  border-bottom: 2px dashed @navigation-border;
-  padding-bottom: 25px;
-  @media @mobile{
+.home {
+  margin: 0 auto;
+
+  header{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  h1{
-    font-weight: bold;
-    margin: 25px 0;
+    margin: 0;
+    border-bottom: 2px dashed @silver;
+    padding-bottom: 15px;
+
     @media @mobile{
-      font-size: 2.5rem;
+      margin: 0 auto 30px;
+      width: 90%;
+    }
+
+    .header-img{
+      background: url(../img/fun-bus.jpg) no-repeat center / cover;
+      height: 30rem;
+      width: 100%;
+      margin-bottom: 25px;
     }
   }
-}
-
-.home {
 
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @media @mobile{
-      flex-direction: column;
-      align-items: center;
-  }
 
-   
-    
+    @media @mobile{
+      margin: 0 auto 30px;
+      flex-direction: column;
+      width: 90%;
+      border-bottom: 2px dashed @silver;
+      padding-bottom: 30px;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
       @media @mobile{
         width: 100%;
-    }
+        padding: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
       @media @mobile{
-        width: 90%;
-    }
+        width: 100%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
@@ -54,23 +65,32 @@ header{
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      flex-direction: column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        margin-bottom: 30px;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-      @media @mobile{
-        margin-bottom: 25px;
-      }
     }
   }
 
   .content-destination {
-    width: 100%;
+    width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile{
+      width: 90%;
+    }
 
     img {
       border-radius: 10px;
@@ -82,54 +102,24 @@ header{
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+
     @media @mobile{
       flex-direction: column;
-      align-items: center;
     }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-      @media @mobile{
-        width: 100%;
-        margin-left: 15px;
-      }
-      .btn{
-        .button(whitesmoke, @button-bg, 10px);
-      }
-    }
-  }
-  .choose{
-    padding: 30px 0;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 1.5rem;
-    h1{
-      margin-bottom: 30px;
-      border-bottom: 1px dotted grey;
-      border-radius: 50%;
-      @media @mobile{
-        margin-right: 60%;
-      }
-    }
-    form{
-      margin-right: 60%;
       display: flex;
       flex-direction: column;
-      align-content: flex-start;
+
       @media @mobile{
-        width: 100%;
+        width: 75%;
+        margin: 0 0 30px 15%;
       }
-      input, select{
-        margin-bottom: 10px;
-        border-radius: 15px;
-        @media @mobile{
-          height: 50px;
-        }
+
+      .btn{
+        .button(@white, @eastern-blue, 10px, 35px)
       }
     }
   }
