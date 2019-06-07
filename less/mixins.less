@@ -1,17 +1,17 @@
 // Mixins in here
 // color, background, then padding
-.button(@1, @2, @3: 0, @4: auto) {
+.button {
     text-align: center;
-    color: @1;
-    background: @2;
-    padding: @3 @4;
+    color: @white;
+    background: @eastern-blue;
+    padding: 10px 35px;
     border-radius: 15px;
     font-size: 2rem;
     width: 80%;
 
     &:hover {
-        color: @2;
-        background: @1;
+        color: @eastern-blue;
+        background: @white;
         cursor: pointer;
         .trans();
     }
@@ -19,4 +19,13 @@
 
 .trans() {
     transition: .5s ease-out;
+}
+
+.mob(@1: inherit, @2: inherit, @3: inherit, @4: inherit) {
+    @media @mobile{
+        width: @1;
+        margin: @2;
+        padding: @3;
+        flex-direction: @4;
+    }
 }

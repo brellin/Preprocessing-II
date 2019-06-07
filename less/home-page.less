@@ -19,6 +19,11 @@
       height: 30rem;
       width: 100%;
       margin-bottom: 25px;
+
+      @media @mobile{
+        width: 120%;
+        margin: 0 0 25px -10%;
+      }
     }
   }
 
@@ -105,6 +110,7 @@
 
     @media @mobile{
       flex-direction: column;
+      margin-bottom: 30px;
     }
 
     .destination {
@@ -113,13 +119,11 @@
       display: flex;
       flex-direction: column;
 
-      @media @mobile{
-        width: 75%;
-        margin: 0 0 30px 15%;
-      }
+      .mob(80%, 0 0 0 15%);
 
       .btn{
-        .button(@white, @eastern-blue, 10px, 35px)
+        .button;
+        .mob(inherit, 0 0 0 10px, 10px 35px)
       }
     }
   }
